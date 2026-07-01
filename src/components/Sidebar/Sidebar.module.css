@@ -1,0 +1,144 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -340px;
+  width: 320px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -6px 0 24px rgba(0, 0, 0, 0.12);
+  z-index: 2000;
+  transition: right 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.closeBtn {
+  position: sticky;
+  top: 12px;
+  float: right;
+  margin: 12px 12px 0 0;
+  width: 32px;
+  height: 32px;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  transition: background 0.13s, color 0.13s;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.closeBtn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.closeBtn:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.content {
+  padding: 0 20px 28px;
+  clear: both;
+}
+
+.hero {
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.treeGlyph {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.healthTag {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.treeName {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.species {
+  font-size: 0.83rem;
+  color: #9ca3af;
+  font-style: italic;
+  margin: 0 0 20px;
+}
+
+.details {
+  border-top: 1px solid #f3f4f6;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.rowKey {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.rowVal {
+  font-size: 0.83rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.empty {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 56px);
+  gap: 12px;
+  text-align: center;
+  clear: both;
+}
+
+.emptyIcon {
+  font-size: 2.5rem;
+}
+
+.empty p {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin: 0;
+  line-height: 1.5;
+}

@@ -1,0 +1,64 @@
+.popupWrapper :global(.leaflet-popup-content-wrapper) {
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+  padding: 0;
+  overflow: hidden;
+}
+
+.popupWrapper :global(.leaflet-popup-content) {
+  margin: 0;
+  width: auto !important;
+}
+
+.popup {
+  display: flex;
+  min-width: 220px;
+}
+
+.colorBar {
+  width: 5px;
+  flex-shrink: 0;
+  border-radius: 0;
+}
+
+.body {
+  padding: 12px 14px;
+  flex: 1;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 2px;
+}
+
+.species {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  font-style: italic;
+  margin: 0 0 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: 4px 8px;
+  font-size: 0.78rem;
+}
+
+.key {
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.val {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.healthExcellent { color: #15803d; }
+.healthHealthy   { color: #16a34a; }
+.healthGood      { color: #d97706; }
+.healthAverage   { color: #ea580c; }
+.healthPoor      { color: #dc2626; }

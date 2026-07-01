@@ -1,0 +1,58 @@
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Two-column layout ───────────────────────────────────────── */
+.layout {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Left panel width is set by TreeTypeFilter itself (.panel { width: 230px }) */
+
+/* Map takes the rest */
+.mapArea {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Floating overlay layer inside .mapArea ─────────────────── */
+.overlays {
+  position: absolute;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.topRight {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  pointer-events: all;
+}
+
+/* Mouse coordinates above scale bar */
+.coords {
+  position: absolute;
+  bottom: 38px;
+  left: 14px;
+  background: rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 5px;
+  padding: 4px 10px;
+  font-size: 0.68rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #e5e7eb;
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
